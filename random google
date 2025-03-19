@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recherches Google Aléatoires</title>
+    <script>
+        function openRandomGoogleSearch() {
+            const keywords = ["chat", "intelligence artificielle", "jeu vidéo", "design graphique", "histoire", "musique", "art"];
+            const numPages = 5;
+
+            for (let i = 0; i < numPages; i++) {
+                let keyword = keywords[Math.floor(Math.random() * keywords.length)];
+                let url = "https://www.google.com/search?q=" + encodeURIComponent(keyword);
+                window.open(url, "_blank");
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Ouvrir des recherches Google aléatoires</h1>
+    <button onclick="openRandomGoogleSearch()">Lancer</button>
+</body>
+</html>
